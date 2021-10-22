@@ -9,7 +9,7 @@ function App() {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officia earum ducimus neque obcaecati consequuntur ratione accusamus at officiis tempore,
           magnam non debitis fugit unde alias id quidem necessitatibus.
         </p>
-        <button className={"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4"}>truc</button>
+        <button className={"bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4"}>truc</button>
       </div>
     </div>
   );
