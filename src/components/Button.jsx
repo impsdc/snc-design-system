@@ -1,15 +1,42 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
-import "../styles/index.css"
+import PropTypes from 'prop-types';
+import "../styles/scss/button.scss";
 
-export const Button = (args) => {
-    return (<>
-        <button className={args.background + " p-2 " + (args.rounded ? 'rounded' : "")}>{args.label}</button>
-    </>)
+export const Button = ({ type, label, icon }) => {
+    return (
+        <button
+            className={`
+            btn
+            default
+            ${type}
+            ${icon ? 'icon-btn' : ''}
+            `}>
+            {icon && <span className={`icon ${icon}`}></span>}
+            {label}
+        </button>
+    )
 }
 
-Button.prototype = {
-    background:PropTypes.string,
-    label: PropTypes.string,
-    rounded:PropTypes.boolean
-}
+Button.propTypes = {
+    /**
+    * Define the color of the btn
+    */
+    type: PropTypes.oneOf(['inoui', 'dark', 'edito']),
+    /**
+   * Link contents
+   */
+    label: PropTypes.string.isRequired,
+    /**
+     * Classname of the icon font 
+     */
+    icon: PropTypes.string,
+    /**
+    * Click handler
+    */
+    onClick: PropTypes.func
+};
+
+Button.defaultProps = {
+    type: 'default',
+    onClick: undefined,
+};

@@ -1,0 +1,128 @@
+/*
+
+    == Configuration variables
+    == This file contains variables that are used in page layout and default sizes, colors, definitions, etc
+    == Source: copy/pasted from KNACSS v4.4.5 (@author: Raphael Goetter, Alsacreations - licence WTFPL http://www.wtfpl.net ) with modifications
+    ==         and https://github.com/alsacreations/KNACSS/blob/master/sass/_config/_breakpoints.scss for grid/grillade variables
+
+
+ * @contributors: SC5, Raphaël Goetter (Alsacréations), Jennifer Noesser (Alsacréations), Philippe Vayssière (Alsacréations)
+ * @date-created: 2016-05-09
+ * @last-update: 2016-11-22
+
+*/
+
+// Config file and project variables
+
+/* -------------------------------------------------------------------------------- */
+/* PATHS */
+/* -------------------------------------------------------------------------------- */
+$font-path: "../fonts/" !default;
+$img-path: "../images/" !default;
+
+/* Examples:
+    url("#{$font-path}avenir-lighter.woff")
+    url("#{$img-path}label.svg")
+*/
+
+/* -------------------------------------------------------------------------------- */
+/* FONTS */
+/* -------------------------------------------------------------------------------- */
+
+// font sizes
+$base-font-size-miv: 1.6rem !default; // ex. 1.6rem would be "16px" equivalent
+$base-font-size-xl-miv: 2.4rem !default; // ex. 2.4rem would be "24px" equivalent
+$base-font-size: 1.8rem !default; // ex. 1.6rem would be "16px" equivalent
+$base-font-size-tiny: 1.6rem !default; // ex. 1.6rem would be "16px" equivalent
+$small-font-size: 1.4rem !default;
+$line-height: 1.5 !default;
+$line-height-accessibility: 2.7 !default; // equiv "56px"
+$letter-spacing-accessibility: 0.216 !default;
+$word-spacing-accessibility: 0.288 !default;
+$h1-size: 3.6rem !default; // equiv "36px"
+$h1-size-tiny: 2.5rem;
+$h2-size: 2.8rem !default; // equiv "28px"
+$h2-size-tiny: 2rem !default;
+$h3-size: 2.8rem !default; // equiv "28px"
+$h3-size-tiny: 2rem !default; // equiv "28px"
+$h4-size: 2rem !default; // equiv "20px"
+$h5-size: 1.6rem !default; // equiv "16px"
+$h6-size: 1.5rem !default; // equiv "15px"
+
+// New charter
+$small-title: 2.4rem !default; // ex. 2.4rem would be "24x" equivalent
+
+// font stacks
+$font-stack-common: "Avenir", Arial, sans-serif !default; // common text font
+$font-stack-headings: "Avenir", Arial, sans-serif !default; // headings font
+$font-stack-monospace: consolas, courier, monospace !default; // monospace font
+$font-stack-number: "Saguez", "Avenir", Arial, sans-serif !default; // Saguez currently for number on evidence block
+$font-stack-number-rounded: "Traverse", "Avenir", Arial, sans-serif !default; // Saguez currently for number on evidence block
+
+$font-stack-dyslexic-common: "OpenDyslexic", Arial, sans-serif !default; // sass-lint:disable-line no-important
+$font-stack-dyslexic-headings: "OpenDyslexic", Arial, sans-serif !default; // sass-lint:disable-line no-important
+/* -------------------------------------------------------------------------------- */
+/* COLORS */
+/* -------------------------------------------------------------------------------- */
+// Border color
+$border-color: $color-coolgray-3;
+
+// font colors
+$base-color: $color-carbon !default; // text color on body and content
+$primary-color: $base-color !default; // text color on primary elements
+$secondary-color: $base-color !default; // text color on secondary elements
+$headings-color: $color-coolgray-11 !default; // text color on headings
+$headings-1-color: $base-color !default; // text color on headings level 1
+$headings-2-color: $base-color !default; // text color on headings level 2
+$headings-3-color: $base-color !default; // text color on headings level 3
+$base-color-link: $color-carbon !default; // base links color
+
+// backgrounds
+$base-background: $color-white !default; // body background color
+$primary-background: $base-background !default; // primary elements background color
+$secondary-background: $base-background !default; // secondary elements background color
+
+/* -------------------------------------------------------------------------------- */
+/* MARGINS
+
+Prefix: "margin" because these variables are ONLY for margin / padding CSS
+Suffixes:
+    - "large": this is for media queries "large" (and generally "small")
+    - "tiny": this is for media queries "tiny" (and sometimes maybe "small")
+    - "all": this is for all media queries (same value between "large", "small" and "tiny")
+
+These variables are mostly for blocks respecting these values.
+We can't use "xxl-large" without using "xxl-tiny".
+
+*/
+/* -------------------------------------------------------------------------------- */
+$margin-xxxl-large: 9rem;
+$margin-xxxl-tiny: 5rem;
+
+$margin-xxl-large: 7rem;
+$margin-xxl-tiny: 3.5rem;
+
+$margin-xl-large: 6rem;
+$margin-xl-tiny: 4rem;
+
+$margin-l-all: 4rem;
+
+$margin-m-large: 3rem;
+$margin-m-tiny: 2rem;
+
+$margin-s-all: 2rem;
+
+$margin-xs-all: 1rem;
+
+$margin-icon: 0.5rem;
+
+// Other margins
+$padding-container-tiny: 2.8rem;
+
+/* -------------------------------------------------------------------------------- */
+/* RADIUS */
+/* -------------------------------------------------------------------------------- */
+$radius-smaller: 5px !default;
+$radius-default: 7px !default; // to use almost everywhere there are rounded borders
+$radius-secondary: 10px !default;
+$radius-round: 50% !default; // to make rounds

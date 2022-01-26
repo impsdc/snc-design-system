@@ -1,0 +1,147 @@
+/*
+
+    == SNCF identity colors
+
+*/
+
+// SNCF v2 colors (true!)
+$color-blue: #0088ce; // "bleu primaire"
+$color-blue-light: #e6f3fa; // "bleu tertiaire"
+$color-teal: #009aa6; // "bleu canard"
+$color-applegreen: #82be00; // "vert pomme"
+$color-limegreen: #d2e100; // "vert anis"
+$color-yellow: #ffb612; // "jaune safran"
+$color-orange: #e05206; // "orange"
+$color-raspberry: #cd0037; // "framboise"
+$color-plum: #a1006b; // "prune"
+$color-purple: #6e1e78; // "violet"
+$color-carbon: #333333; // "carbone"
+$color-red-assistance: #d52b1e; // "rouge assistance"
+
+// Colors variations
+$color-blue-accessible: #0074af;
+$color-red-assistance-accessible: #c2271b;
+$color-carbon-light: #444444;
+
+// TGV Inoui Color
+$color-inoui-frenchberry: #9b2743; // "Fench Berry inOui"
+$color-inoui-blue: #0075a1; // "Blue inOui"
+$color-inoui-yellow: #fdda24; // "Jaune inOui"
+$color-inoui-warmgray-1: #e0ded8; // "Gris Chaud 1 inOui"
+
+// TGV Inoui Color Campaign
+$color-inoui-frenchberry-campaign: #c73256; // "Fench Berry Campagne inOui"
+$color-inoui-blue-campaign: #0092c9; // "Bleu Campagne inOui"
+$color-inoui-yellow-campaign: #fde565; // "Jaune Campagne inOui"
+$color-inoui-warmgray-1-campaign: #fffdf6; // "Gris Chaud 1 Campagne inOui"
+
+// SNCF v2 grey colors (true!)
+$color-black: #000000;
+$color-coolgray-11: #4d4f53;
+$color-coolgray-9: #747678;
+$color-coolgray-7: #a0a0a0;
+$color-coolgray-5: #b9b9b9;
+$color-coolgray-3: #d7d7d7;
+$color-coolgray-1: #f2f2f2;
+$color-white: #ffffff;
+
+// Color transparent variation
+$color-blue-transparent: rgba(
+    $color-blue,
+    0.8
+); // "bleu primaire 80% transparent"
+$color-teal-transparent: rgba(
+    $color-teal,
+    0.8
+); // "bleu canard 80% transparent"
+$color-applegreen-transparent: rgba(
+    $color-applegreen,
+    0.8
+); // "vert pomme 80% transparent"
+$color-limegreen-transparent: rgba(
+    $color-limegreen,
+    0.8
+); // "vert anis 80% transparent"
+$color-yellow-transparent: rgba(
+    $color-yellow,
+    0.8
+); // "jaune safran 80% transparent"
+$color-orange-transparent: rgba($color-orange, 0.8); // "orange 80% transparent"
+$color-raspberry-transparent: rgba(
+    $color-raspberry,
+    0.8
+); // "framboise 80% transparent"
+$color-plum-transparent: rgba($color-plum, 0.8); // "prune 80% transparent"
+$color-purple-transparent: rgba($color-purple, 0.8); // "violet 80% transparent"
+$color-carbon-transparent: rgba($color-carbon, 0.8); // "noir 80% transparent"
+$color-red-assistance-transparent: rgba(
+    $color-red-assistance,
+    0.8
+); // "rouge assistance 80% transparent"
+$color-coolgray-1-transparent: rgba(
+    $color-coolgray-1,
+    0.8
+); // "gris-1 80% transparent"
+$color-inoui-frenchberry-transparent: rgba(
+    $color-inoui-frenchberry-campaign,
+    0.8
+); // "Fench Berry Campagne inOui"
+$color-inoui-blue-transparent: rgba(
+    $color-inoui-blue-campaign,
+    0.8
+); // "Bleu Campagne inOui"
+$color-inoui-yellow-transparent: rgba(
+    $color-inoui-yellow-campaign,
+    0.8
+); // "Jaune Campagne inOui"
+$color-inoui-warmgray-1-transparent: rgba(
+    $color-inoui-warmgray-1-campaign,
+    0.8
+); // "Gris Chaud 1 Campagne inOui"
+$color-black-transparent: rgba($color-black, 0.5); // "black 50% transparent"
+$color-black-transparent-80: rgba($color-black, 0.2); // "black 80% transparent"
+
+// Transports lines colors - RER
+$color-line-a: #f7403a;
+$color-line-b: #4b92db;
+$color-line-c: #f3d311;
+$color-line-d: #3f9c35;
+$color-line-e: #de81d3;
+$color-line-h: #844c54;
+$color-line-j: #b6bf00;
+$color-line-k: #ae9a00;
+$color-line-l: #7577c0;
+$color-line-n: #00b092;
+$color-line-p: #eaab00;
+$color-line-r: #e59fdb;
+$color-line-u: #c90062;
+
+// Transports lines colors - Metro
+$color-line-metro-1: #ffce00;
+$color-line-metro-2: #0064b0;
+$color-line-metro-3: #9f9825;
+$color-line-metro-3bis: #86d0f4;
+$color-line-metro-4: #c04191;
+$color-line-metro-5: #f28e42;
+$color-line-metro-6: #83c491;
+$color-line-metro-7: #f3a4ba;
+$color-line-metro-7bis: #83c491;
+$color-line-metro-8: #ceadd2;
+$color-line-metro-9: #d5c900;
+$color-line-metro-10: #e3b32a;
+$color-line-metro-11: #8d5e2a;
+$color-line-metro-12: #00814f;
+$color-line-metro-13: #86d0f4;
+$color-line-metro-14: #5b358c;
+
+// Transports lines colors - Tramway
+$color-line-tram-1: #0c6eb7;
+$color-line-tram-2: #bb4b9c;
+$color-line-tram-3a: #f68f4d;
+$color-line-tram-3b: #008b5a;
+$color-line-tram-4: #fcc322;
+$color-line-tram-5: #d07fb5;
+$color-line-tram-6: #ed1625;
+$color-line-tram-7: #8a5f31;
+$color-line-tram-8: #999736;
+$color-line-tram-11express: #ed6c58;

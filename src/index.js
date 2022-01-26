@@ -1,5 +1,14 @@
+// import * as styles from './src/styles/scss';
+
+// export { styles };
+
+// export * from './src/components/Link';
+// export * from './src/components/Button';
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

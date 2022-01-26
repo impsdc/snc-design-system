@@ -1,0 +1,337 @@
+@import "./vars-breakpoint.scss";
+@import "./vars-identity-colors-contrast-inverted.scss";
+@import "./vars-identity-colors.scss";
+@import "./vars";
+
+// default style
+button {
+  color: inherit;
+  line-height: 1.335;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.3rem 3rem;
+  border: 0;
+  border-radius: $radius-default;
+  font-size: 1.8rem; // default buttons must always have 18px font size
+  font-weight: 500;
+  // force button line-height for links to be as "button" tag to have the same button height
+  line-height: 1.335 !important; // sass-lint:disable-line no-important
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  @media #{$media-tiny} {
+    font-size: 1.6rem; // reproduce body font-size on buttons for tiny size
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    transition-duration: 0.3s;
+    transition-property: background-color, color;
+    transition-timing-function: ease;
+    color: $color-white;
+  }
+}
+
+.btn-small {
+  padding: 0.9rem 2rem 0.7rem;
+}
+
+.btn-focusable {
+  font-weight: 500;
+}
+
+// default (blue)
+%btn-default {
+  background-color: $color-blue;
+  color: $color-white;
+
+  .theme-assistance & {
+    background-color: $color-red-assistance;
+  }
+
+  .theme-white-page & {
+    background-color: $color-carbon;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-blue-accessible;
+
+    .theme-assistance & {
+      background-color: $color-red-assistance-accessible;
+    }
+
+    .theme-white-page & {
+      background-color: $color-black;
+    }
+  }
+
+  &:focus {
+    outline-color: $color-carbon;
+  }
+
+  &.inoui {
+    background-color: $color-inoui-frenchberry;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      color: $color-coolgray-3;
+    }
+  }
+
+  &.dark {
+    background-color: $color-coolgray-9;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      background-color: $color-coolgray-11;
+    }
+  }
+
+  // don't affect search block in home page
+  // sass-lint:disable-block force-pseudo-nesting
+  .bg-purple:not(.home-carousel) &,
+  .bg-plum:not(.home-carousel) &,
+  .bg-raspberry:not(.home-carousel) &,
+  .bg-orange:not(.home-carousel) &,
+  .bg-teal:not(.home-carousel) &,
+  .bg-blue:not(.home-carousel) & {
+    background-color: $color-white;
+
+    &:focus {
+      &.focus-visible {
+        outline: 1px dotted $color-white;
+      }
+    }
+  }
+
+  .bg-yellow:not(.home-carousel) &,
+  .bg-limegreen:not(.home-carousel) &,
+  .bg-applegreen:not(.home-carousel) & {
+    background-color: $color-carbon;
+
+    &:focus {
+      &.focus-visible {
+        outline: 1px dotted $color-carbon;
+      }
+    }
+  }
+
+  .bg-inoui-frenchberry &,
+  .bg-inoui-blue &,
+  .bg-inoui-warmgray & {
+    background-color: $color-white !important; // sass-lint:disable-line no-important
+    color: $color-inoui-frenchberry !important; // sass-lint:disable-line no-important
+
+    &:hover,
+    &:focus {
+      color: $color-inoui-frenchberry-campaign !important; // sass-lint:disable-line no-important
+    }
+  }
+
+  .bg-inoui-yellow & {
+    background-color: $color-carbon !important; // sass-lint:disable-line no-important
+    color: $color-white !important; // sass-lint:disable-line no-important
+
+    &:hover,
+    &:focus {
+      color: $color-coolgray-1 !important; // sass-lint:disable-line no-important
+    }
+  }
+
+  .bg-purple:not(.home-carousel) & {
+    color: $color-purple;
+  }
+
+  .bg-plum:not(.home-carousel) & {
+    color: $color-plum;
+  }
+
+  .bg-raspberry:not(.home-carousel) & {
+    color: $color-raspberry;
+  }
+
+  .bg-orange:not(.home-carousel) & {
+    color: $color-orange;
+  }
+
+  .bg-yellow:not(.home-carousel) & {
+    color: $color-yellow;
+  }
+
+  .bg-applegreen:not(.home-carousel) & {
+    color: $color-applegreen;
+  }
+
+  .bg-teal:not(.home-carousel) & {
+    color: $color-teal;
+  }
+
+  .bg-blue:not(.home-carousel) & {
+    color: $color-blue;
+  }
+
+  .bg-limegreen:not(.home-carousel) & {
+    color: $color-limegreen;
+  }
+}
+
+.default {
+  @extend %btn-default;
+}
+
+.btn-assistance {
+  background-color: $color-red-assistance;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-red-assistance-accessible;
+  }
+
+  &:focus {
+    outline-color: $color-carbon;
+  }
+}
+
+.btn-assistance-light {
+  background-color: $color-white;
+  color: $color-red-assistance;
+
+  &:hover,
+  &:focus {
+    background-color: $color-coolgray-1;
+    color: $color-red-assistance-accessible;
+  }
+
+  &:focus {
+    outline-color: $color-white;
+    outline-offset: 2px;
+  }
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: $margin-xs-all;
+  padding: 1.3rem 3rem;
+  font-size: $base-font-size-tiny;
+  background-color: $color-blue;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-blue-accessible;
+
+    .theme-assistance & {
+      background-color: $color-red-assistance-accessible;
+    }
+
+    .theme-white-page & {
+      background-color: $color-black;
+    }
+  }
+
+  @media #{$media-tiny} {
+    width: 100%;
+    text-align: initial;
+  }
+
+  &.inoui {
+    background-color: $color-inoui-frenchberry;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      color: $color-coolgray-3;
+    }
+  }
+
+  .icon {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+
+    &::after {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      content: "";
+      background-image: url("../../images/phone.svg");
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      &::after {
+        color: $color-white;
+      }
+    }
+  }
+
+  &.edito {
+    background-color: $color-white;
+    color: $color-blue;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: $base-font-size-miv;
+
+    &:hover {
+      color: $color-blue-accessible;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $color-carbon-light;
+      color: $color-white !important; // sass-lint:disable-line no-important
+    }
+  }
+}
+
+// CURRENT CSS
+
+// Icons for twitter and youtube buttons
+.btn-twitter,
+.btn-youtube {
+  .snc-icon-twitter,
+  .snc-icon-youtube {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    line-height: 1;
+    vertical-align: -5%;
+
+    @media #{$media-tiny} {
+      vertical-align: -12%;
+    }
+  }
+}
+
+// Youtube buttons
+.btn-youtube {
+  background-color: $color-red-assistance;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-red-assistance-accessible;
+  }
+
+  &:focus {
+    outline-color: $color-carbon;
+  }
+}
+
+//Btn block allow to set width to 100% when on tablet and mobile
+.btn-block {
+  @media #{$media-tiny-small} {
+    width: 100%;
+  }
+}

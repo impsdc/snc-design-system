@@ -1,0 +1,178 @@
+@import "./vars-breakpoint.scss";
+@import "./vars-identity-colors-contrast-inverted.scss";
+@import "./vars-identity-colors.scss";
+@import "./vars";
+
+a {
+  color: $base-color-link;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    transition: color ease 0.3s;
+  }
+}
+
+a.link {
+  display: block;
+  color: $color-blue;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-blue-accessible;
+    .theme-assistance & {
+      color: $color-red-assistance-accessible;
+    }
+
+    .theme-white-page & {
+      color: $color-black;
+    }
+  }
+
+  &::after {
+    color: $color-blue;
+    font-size: 0.5em;
+    padding-right: 1rem;
+    margin-left: 0.5rem;
+    vertical-align: 5%;
+    background-repeat: no-repeat;
+  }
+
+  &.external {
+    &::after {
+      content: "";
+      background-image: url("../../images/external-link.svg");
+    }
+  }
+
+  &.internal {
+    &::after {
+      content: "";
+      background-image: url("../../images/arrow.svg");
+    }
+  }
+
+  &.download {
+    &::after {
+      content: "";
+      background-image: url("../../images/download.svg");
+    }
+  }
+
+  &.inoui {
+    color: $color-inoui-frenchberry;
+
+    &::after {
+      color: $color-inoui-frenchberry;
+    }
+
+    &::after:hover {
+      color: $color-inoui-frenchberry-campaign;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-inoui-frenchberry-campaign;
+    }
+  }
+
+  .theme-assistance & {
+    color: $color-red-assistance;
+  }
+
+  .theme-white-page & {
+    color: $color-carbon;
+  }
+}
+
+// Current CSS
+/* ------------- Links in wysiwyg (we can't put a "span" in the "a" tag) ------------- */
+.links-external,
+.links-download,
+.links-internal,
+.links-email,
+.tel {
+  color: $color-blue;
+  font-weight: 500;
+
+  .theme-assistance & {
+    color: $color-red-assistance;
+  }
+
+  .theme-white-page & {
+    color: $color-carbon;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-blue-accessible;
+
+    .theme-assistance & {
+      color: $color-red-assistance-accessible;
+    }
+
+    .theme-white-page & {
+      color: $color-black;
+    }
+  }
+}
+
+// inoui
+.snc-icon-internal-link {
+  color: $color-inoui-frenchberry;
+
+  .bg-inoui-frenchberry &,
+  .bg-inoui-blue & {
+    color: $color-white;
+  }
+
+  .bg-inoui-yellow & {
+    color: $color-carbon;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-inoui-frenchberry-campaign;
+
+    .bg-inoui-frenchberry &,
+    .bg-inoui-blue & {
+      color: $color-coolgray-3;
+    }
+
+    .bg-inoui-yellow & {
+      color: $color-black;
+    }
+  }
+}
+
+// videos
+.video {
+  position: relative;
+  margin-top: 1.2rem;
+  padding-left: 2.6rem;
+
+  .inoui-template-container & {
+    color: $color-blue;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: "•";
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-blue-accessible;
+
+    .inoui-template-container & {
+      color: $color-blue-accessible;
+    }
+  }
+
+  @media #{$media-tiny-small} {
+    width: 100%;
+  }
+}

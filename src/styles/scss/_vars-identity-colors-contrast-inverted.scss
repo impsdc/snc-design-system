@@ -1,0 +1,112 @@
+/*
+
+    == SNCF identity colors
+    == for inverted contrast colours (accessibility)
+
+*/
+
+// SNCF v2 colors (true!)
+$color-blue: #FF7731; // "bleu primaire" inverted
+$color-teal: #FF6559; // "bleu canard" inverted
+$color-applegreen: #7D41FF; // "vert pomme" inverted
+$color-limegreen: #2D1EFF; // "vert anis" inverted
+$color-yellow: #0049ED; // "jaune safran" inverted
+$color-orange: #1FADF9; // "orange" inverted
+$color-raspberry: #32FFC8; // "framboise" inverted
+$color-plum: #5EFF94; // "prune" inverted
+$color-purple: #91E187; // "violet" inverted
+$color-carbon: #CCCCCC; // "carbone" inverted
+$color-red-assistance: #2AD4E1; // "rouge assistance" inverted
+
+// Colors variations
+$color-blue-accessible: #FF8B50; // "bleu primaire" inverted
+$color-red-assistance-accessible: #3DD8E4; // "rouge assistance" inverted
+$color-carbon-light: #BBBBBB; // inverted
+
+// TGV Inoui Color
+$color-inoui-frenchberry: #64D8BC; // "Fench Berry inOui" inverted
+$color-inoui-blue: #FF8A5E; // "Blue inOui" inverted
+$color-inoui-yellow: #0225DB; // "Jaune inOui" inverted
+$color-inoui-warmgray-1: #1F2127; // "Warm Grey 1 inOui" inverted
+
+// TGV Inoui Color Campaign
+$color-inoui-frenchberry-campaign: #38CDA9; // "Fench Berry inOui" inverted
+$color-inoui-blue-campaign: #FF6D36; // "Fench Berry inOui" inverted
+$color-inoui-yellow-campaign: #021A9A; // "Fench Berry inOui" inverted
+$color-inoui-warmgray-1-campaign: #000209; // "Fench Berry inOui" inverted
+
+// SNCF v2 grey colors (true!)
+$color-black: #FFFFFF; // inverted
+$color-coolgray-11: #B2B0AC; // inverted
+$color-coolgray-9: #8B8987; // inverted
+$color-coolgray-7: #8B8987; // inverted
+$color-coolgray-5: #464646; // inverted
+$color-coolgray-3: #282828; // inverted
+$color-coolgray-1: #0D0D0D; // inverted
+$color-white: #000000; // inverted
+
+// Color transparent variation
+$color-blue-transparent: $color-blue;
+$color-teal-transparent: $color-teal;
+$color-applegreen-transparent: $color-applegreen;
+$color-limegreen-transparent: $color-limegreen;
+$color-yellow-transparent: $color-yellow;
+$color-orange-transparent: $color-orange;
+$color-raspberry-transparent: $color-raspberry;
+$color-plum-transparent: $color-plum;
+$color-purple-transparent: $color-purple;
+$color-carbon-transparent: $color-carbon;
+$color-red-assistance-transparent: $color-red-assistance;
+$color-coolgray-1-transparent: $color-coolgray-1;
+$color-black-transparent: $color-black;
+$color-black-transparent-80: $color-black;
+
+$color-inoui-frenchberry-transparent: $color-inoui-frenchberry; // "Fench Berry Campagne inOui"
+$color-inoui-blue-transparent: $color-inoui-blue; // "Bleu Campagne inOui"
+$color-inoui-yellow-transparent: $color-inoui-yellow; // "Jaune Campagne inOui"
+$color-inoui-warmgray-1-transparent: $color-inoui-warmgray-1; // "Gris Chaud 1 Campagne inOui"
+
+// Transports lines colors - RER
+$color-line-a: $color-blue;
+$color-line-b: $color-blue;
+$color-line-c: $color-blue;
+$color-line-d: $color-blue;
+$color-line-e: $color-blue;
+$color-line-h: $color-blue;
+$color-line-j: $color-blue;
+$color-line-k: $color-blue;
+$color-line-l: $color-blue;
+$color-line-n: $color-blue;
+$color-line-p: $color-blue;
+$color-line-r: $color-blue;
+$color-line-u: $color-blue;
+
+// Transports lines colors - Metro
+$color-line-metro-1: $color-blue;
+$color-line-metro-2: $color-blue;
+$color-line-metro-3: $color-blue;
+$color-line-metro-3bis: $color-blue;
+$color-line-metro-4: $color-blue;
+$color-line-metro-5: $color-blue;
+$color-line-metro-6: $color-blue;
+$color-line-metro-7: $color-blue;
+$color-line-metro-7bis: $color-blue;
+$color-line-metro-8: $color-blue;
+$color-line-metro-9: $color-blue;
+$color-line-metro-10: $color-blue;
+$color-line-metro-11: $color-blue;
+$color-line-metro-12: $color-blue;
+$color-line-metro-13: $color-blue;
+$color-line-metro-14: $color-blue;
+
+// Transports lines colors - Tramway
+$color-line-tram-1: $color-blue;
+$color-line-tram-2: $color-blue;
+$color-line-tram-3a: $color-blue;
+$color-line-tram-3b: $color-blue;
+$color-line-tram-4: $color-blue;
+$color-line-tram-5: $color-blue;
+$color-line-tram-6: $color-blue;
+$color-line-tram-7: $color-blue;
+$color-line-tram-8: $color-blue;
+$color-line-tram-11express: $color-blue;

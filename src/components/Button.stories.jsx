@@ -10,17 +10,33 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-    background: "bg-blue-500",
-    label:"Primary",
-    rounded:false
+export const Default = Template.bind({});
+Default.args = {
+    label: 'Default',
+    type: 'default'
 }
 
-export const PrimaryRounded = Template.bind({});
+export const DefaultInoui = Template.bind({});
+DefaultInoui.args = {
+    label: 'Default Inoui',
+    type: 'inoui',
+}
 
-PrimaryRounded.args = {
-    ...Primary.args,
-    background:"bg-red-500",
-    label: 'Primary with a really long name',
+export const DefaultDark = Template.bind({});
+DefaultDark.args = {
+    label: 'Default Dark',
+    type: 'dark',
+}
+
+export const DefaultIcon = Template.bind({});
+DefaultIcon.args = {
+    label: 'Icon button',
+    icon: 'phone',
+}
+
+export const Edito = Template.bind({});
+Edito.args = {
+    icon: 'phone',
+    type: "edito",
+    label: 'Edito button',
 }

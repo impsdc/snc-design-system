@@ -1,0 +1,230 @@
+@import "./vars-breakpoint.scss";
+@import "./vars-identity-colors-contrast-inverted.scss";
+@import "./vars-identity-colors.scss";
+@import "./vars";
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  [dir="rtl"] & {
+    float: right;
+  }
+  img {
+    display: block;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+
+  display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+
+.slick-arrow {
+  &.slick-next {
+    position: absolute;
+    top: 45%;
+    right: -5%;
+  }
+
+  &.slick-prev {
+    position: absolute;
+    top: 45%;
+    left: -5%;
+
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  // background arrow
+  &::after {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: $radius-round;
+    background-color: $color-blue;
+    content: "";
+
+    z-index: -1;
+
+    .inoui-template-container & {
+      background-color: $color-inoui-frenchberry;
+    }
+  }
+
+  // Arrow
+  &::before {
+    content: "";
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: $radius-round;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../images/arrow-white.svg");
+  }
+
+  &.slick-hidden {
+    display: none;
+  }
+}
+
+.snc-icon-circle-arrow {
+  display: block;
+
+  &::before {
+    color: $color-white;
+    line-height: 1;
+
+    @media #{$media-tiny} {
+      font-size: 3rem;
+    }
+
+    @media #{$media-small-large} {
+      font-size: 4rem;
+    }
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: $radius-round;
+    background-color: $color-blue;
+    content: "";
+    background-image: url("../../images/external-link.svg");
+    z-index: -1;
+
+    .inoui-template-container & {
+      background-color: $color-inoui-frenchberry;
+    }
+  }
+}
+
+.block-videos-iframe {
+  width: 100%;
+  margin-bottom: 2.4rem;
+  border-radius: 2px;
+
+  // Adjust video height for 16/9 view
+  @media #{$media-large} {
+    // height: 56rem;
+    height: 33rem;
+  }
+
+  @media #{$media-small} {
+    height: 37rem;
+  }
+
+  @media #{$media-tiny} {
+    height: 25rem;
+  }
+
+  .container-edito-with-anchor &,
+  .container-edito-centered &,
+  .container-videos-with-description & {
+    @media #{$media-large} {
+      height: 37rem;
+    }
+  }
+}
