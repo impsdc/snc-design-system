@@ -1,16 +1,23 @@
 import "./styles/index.css";
+import header from "./images/header.jpg";
+import footer from "./images/footer.jpg";
+import { Carrousel} from "./components/Carrousel";
+import {data} from "./components/Carrousel.stories"
+
+console.log(data);
 
 function App() {
   return (
-    <div className="bg-blue-400 h-screen grid">
-      <div className="w-3/4 my-auto ml-20">
-        <h1 className="text-5xl font-bold mb-10 text-white">JIT mode is cool</h1>
-        <p className="text-white">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officia earum ducimus neque obcaecati consequuntur ratione accusamus at officiis tempore,
-          magnam non debitis fugit unde alias id quidem necessitatibus.
-        </p>
-        <button className={"bg-orange-500 rounded-full hover:bg-red-700 text-orange-500 font-bold py-2 px-4"}>truc</button>
+    <div className="relative min-h-screen">
+      <section>
+        <img src={header} alt="header" />
+      </section>
+      <div className="">
+      <Carrousel slide={data} />
       </div>
+      <section className="" style={{background: '#333'}}>
+        <img src={footer} alt="header" className="block ml-auto mr-auto"/>
+      </section>
     </div>
   );
 }

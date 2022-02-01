@@ -4,9 +4,10 @@ import "../styles/index.css";
 import "../styles/scss/slick.scss";
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
+import { Link } from "./Link";
 
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
@@ -15,7 +16,9 @@ const settings = {
   prevArrow: <button />,
 };
 
-const ItemSlide = ({ slide }) => {
+
+const ItemSlide = ({ slide, counter }) => {
+
   return (
     <div>
       <iframe
@@ -26,18 +29,19 @@ const ItemSlide = ({ slide }) => {
         allowFullScreen
         enablejsapi="1">
       </iframe>
-      <div className='w-5/6'>
-        <span className='text-black text-4xl font-medium mt-6 break-words'>
+      <div className='w-full flex justify-center items-center'>
+        <span className='w-5/6 text-black text-4xl font-normal break-words' style={{ LineHeight: 1.2214 }}>
           {slide.title}
         </span>
+        <span className='w-1/6 text-right text-3xl font-medium slideshow-counter'>
+          {counter}
+        </span>
       </div>
-      <ul className='mt-3 d-flex fle'>
+      <ul className='mt-3'>
         {slide.link.map((link, item) => {
           return (
-            <li key={item}>
-              <a href={link.url} target={link.type === "external" ? '_blank' : ''} rel="noreferrer">
-                {link.content}
-              </a>
+            <li key={item} className={"links-wrapper"}>
+              <Link label={link.content} type={"external"} blank={true} forVideo={true} />
             </li>
           )
         })}
@@ -46,13 +50,13 @@ const ItemSlide = ({ slide }) => {
   )
 }
 
-export const Carrousel = ({ slide }) => {
+export const Carrousel = ({ slide, inoui }) => {
   return (
-    <div className='max-w-screen-md'>
+    <div className={`max-w-screen-md mr-auto ml-auto ${inoui && 'inoui-template-container'}`}>
       <Slider {...settings}>
-        {slide.map((slide, index) => {
+        {slide.map((item, index) => {
           return (
-            <ItemSlide slide={slide} key={index} />
+            <ItemSlide slide={item} key={index} counter={`${index + 1}/${slide.length}`} />
           )
         })}
       </Slider>
@@ -64,9 +68,14 @@ Slider.propTypes = {
   /**
   * wheather the link is under a video or not 
   */
-  data: PropTypes.object
+  slides: PropTypes.object,
+  /**
+  * if theme is inoui or not
+  */
+  inoui: PropTypes.bool,
 };
 
 Slider.defaultProps = {
-  data: {}
+  data: {},
+  inoui: false
 };

@@ -150,7 +150,6 @@ a.link {
 // videos
 .video {
   position: relative;
-  margin-top: 1.2rem;
   padding-left: 2.6rem;
 
   .inoui-template-container & {
@@ -172,7 +171,28 @@ a.link {
     }
   }
 
+  .inoui-template-container & {
+    color: $color-inoui-frenchberry;
+  }
+
   @media #{$media-tiny-small} {
     width: 100%;
+  }
+}
+
+.links-wrapper {
+  &:first-child {
+    a {
+      margin-top: 1.2rem;
+    }
+  }
+
+  &:only-child {
+    a {
+      padding-left: 0;
+      &::before {
+        content: "";
+      }
+    }
   }
 }
