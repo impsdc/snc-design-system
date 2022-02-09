@@ -23,8 +23,6 @@ var _Bloc = require("./components/Bloc");
 
 var _data = require("./helpers/data");
 
-console.log(_data.data);
-
 function App() {
   return /*#__PURE__*/React.createElement("div", {
     className: "relative min-h-screen"

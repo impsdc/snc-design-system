@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/scss/link.scss'
 
 export const Link = ({ label, type, href, blank, inoui, fontSize, forVideo }) => {
     return (

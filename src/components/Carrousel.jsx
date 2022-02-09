@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import "../styles/index.css";
-import "../styles/scss/slick.scss";
 import PropTypes from "prop-types";
 import Slider from "react-slick";
 import { Link } from "./Link";

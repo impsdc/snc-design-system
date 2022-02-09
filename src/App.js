@@ -1,4 +1,4 @@
-import "./styles/index.css";
+import "./styles/scss/app.css";
 import header from "./images/header.jpg";
 import footer from "./images/footer.jpg";
 import bloc1 from "./images/bloc1.jpg";
@@ -6,8 +6,6 @@ import bloc2 from "./images/bloc2.jpg";
 import { Carrousel } from "./components/Carrousel";
 import { Bloc } from "./components/Bloc";
 import { data } from "./helpers/data";
-
-console.log(data);
 
 function App() {
   return (
