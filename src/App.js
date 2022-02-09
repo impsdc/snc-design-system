@@ -1,4 +1,4 @@
-import "./styles/scss/app.css";
+import "./styles/css/app.css";
 import header from "./images/header.jpg";
 import footer from "./images/footer.jpg";
 import bloc1 from "./images/bloc1.jpg";
