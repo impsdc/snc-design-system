@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env BABEL_ENV=production babel src -d dist && gulp compilescssForProd",
+    "build": "rm -rf dist && cross-env BABEL_ENV=production babel src/components -d dist && gulp compilescssForProd",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/styles/tailwind.css -o src/styles/index.css",
