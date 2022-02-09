@@ -1,5 +1,4 @@
 import React from 'react';
-import "../styles/index.css";
 import { Carrousel } from './Carrousel';
 import { data } from "../helpers/data"
 

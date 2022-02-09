@@ -9,8 +9,6 @@ exports.default = exports.Edito = exports.DefaultInoui = exports.DefaultIcon = e
 
 var _react = _interopRequireDefault(require("react"));
 
-require("../styles/index.css");
-
 var _Button = require("./Button");
 
 var _default = {

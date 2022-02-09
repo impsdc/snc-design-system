@@ -9,8 +9,6 @@ exports.default = exports.Inoui = exports.Default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("../styles/index.css");
-
 var _Carrousel = require("./Carrousel");
 
 var _data = require("../helpers/data");

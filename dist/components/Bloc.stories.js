@@ -9,8 +9,6 @@ exports.default = exports.Default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("../styles/index.css");
-
 var _Bloc = require("./Bloc");
 
 var _bloc = _interopRequireDefault(require("../images/bloc2.jpg"));

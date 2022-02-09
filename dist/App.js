@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-require("./styles/index.css");
+require("./styles/scss/app.css");
 
 var _header = _interopRequireDefault(require("./images/header.jpg"));
 

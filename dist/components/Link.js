@@ -9,8 +9,6 @@ exports.Link = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("../styles/scss/link.scss");
-
 /* eslint-disable jsx-a11y/anchor-is-valid */
 var Link = function Link(_ref) {
   var label = _ref.label,

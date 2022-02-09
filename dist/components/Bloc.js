@@ -9,8 +9,6 @@ exports.Bloc = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("../styles/scss/button.scss");
-
 var Bloc = function Bloc(_ref) {
   var space = _ref.space,
       img = _ref.img;

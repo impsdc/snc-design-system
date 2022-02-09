@@ -9,8 +9,6 @@ exports.Button = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("../styles/scss/button.scss");
-
 var Button = function Button(_ref) {
   var type = _ref.type,
       label = _ref.label,
