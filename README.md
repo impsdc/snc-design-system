@@ -9,7 +9,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 In order to enable Taiwind JIT feature, you need to lauch the watcher files to load only the neccessary CSS classes of tailwind.
 
-### `npx webpack --progress`
+### `npm run build-storybook`
 
 Build package for production
 
