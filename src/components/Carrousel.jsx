@@ -54,7 +54,7 @@ const ItemSlide = ({ slide, counter }) => {
 
 export const Carrousel = ({ slide, inoui, space }) => {
   return (
-    <div className="block mx-auto md:w-2/4">
+    <div className="wrapper-carrousel block mx-auto">
       <div
         className={`bg-gray-300 max-w-screen-md mr-auto ml-auto ${inoui && "inoui-template-container"
           } ${space === "10px"

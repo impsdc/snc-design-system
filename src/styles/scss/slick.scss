@@ -231,6 +231,12 @@ html {
   }
 }
 
+.wrapper-carrousel {
+  @media #{$media-tiny-plus-max} {
+    width: 70%;
+  }
+}
+
 .block-videos-iframe {
   width: 100%;
   padding-bottom: 2.4rem;
