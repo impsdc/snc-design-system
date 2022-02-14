@@ -61,7 +61,7 @@ var Carrousel = function Carrousel(_ref2) {
       inoui = _ref2.inoui,
       space = _ref2.space;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "block mx-auto md:w-2/4"
+    className: "wrapper-carrousel block mx-auto"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "bg-gray-300 max-w-screen-md mr-auto ml-auto ".concat(inoui && "inoui-template-container", " ").concat(space === "10px" ? "pt-4" : space === "30px" ? "pt-12" : space === "50px" ? "pt-20" : space === "70px" ? "pt-28" : "")
   }, /*#__PURE__*/_react.default.createElement(_reactSlick.default, settings, slide.map(function (item, index) {
