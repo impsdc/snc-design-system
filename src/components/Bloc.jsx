@@ -7,13 +7,13 @@ export const Bloc = ({ space, img }) => {
             <img
                 src={img}
                 alt="header"
-                className={`bg-gray-300 block ml-auto mr-auto ${space === "light"
+                className={`bg-gray-300 block ml-auto mr-auto ${space === "10px"
                     ? "pt-4"
-                    : space === "normal"
+                    : space === "30px"
                         ? "pt-12"
-                        : space === "medium"
+                        : space === "50px"
                             ? "pt-20"
-                            : space === "big"
+                            : space === "70px"
                                 ? "pt-28"
                                 : ""
                     }`}
@@ -30,7 +30,7 @@ Bloc.propTypes = {
     /**
      * Padding top given to the component
      */
-    space: PropTypes.oneOf(["light", "normal", "medium", "big"]),
+    space: PropTypes.oneOf(["10px", "30px", "50px ", "70px"]),
 };
 
 Bloc.defaultProps = {

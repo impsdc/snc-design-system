@@ -54,30 +54,32 @@ const ItemSlide = ({ slide, counter }) => {
 
 export const Carrousel = ({ slide, inoui, space }) => {
   return (
-    <div
-      className={`bg-gray-300 max-w-screen-md mr-auto ml-auto ${inoui && "inoui-template-container"
-        } ${space === "light"
-          ? "pt-4"
-          : space === "normal"
-            ? "pt-12"
-            : space === "medium"
-              ? "pt-20"
-              : space === "big"
-                ? "pt-28"
-                : ""
-        }`}
-    >
-      <Slider {...settings}>
-        {slide.map((item, index) => {
-          return (
-            <ItemSlide
-              slide={item}
-              key={index}
-              counter={`${index + 1}/${slide.length}`}
-            />
-          );
-        })}
-      </Slider>
+    <div className="block mx-auto md:w-2/4">
+      <div
+        className={`bg-gray-300 max-w-screen-md mr-auto ml-auto ${inoui && "inoui-template-container"
+          } ${space === "10px"
+            ? "pt-4"
+            : space === "30px"
+              ? "pt-12"
+              : space === "50px"
+                ? "pt-20"
+                : space === "70px"
+                  ? "pt-28"
+                  : ""
+          }`}
+      >
+        <Slider {...settings}>
+          {slide.map((item, index) => {
+            return (
+              <ItemSlide
+                slide={item}
+                key={index}
+                counter={`${index + 1}/${slide.length}`}
+              />
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 };
@@ -90,7 +92,7 @@ Carrousel.propTypes = {
   /**
    * Padding top given to the component
    */
-  space: PropTypes.oneOf(["light", "normal", "medium", "big"]),
+  space: PropTypes.oneOf(["10px", "30px", "50px", "70px"]),
   /**
    * Array of slides
    */

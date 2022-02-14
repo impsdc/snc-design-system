@@ -1,8 +1,3 @@
-@import "./vars-breakpoint.scss";
-@import "./vars-identity-colors-contrast-inverted.scss";
-@import "./vars-identity-colors.scss";
-@import "./vars";
-
 html {
   /* set base font-size to equiv "10px", which is adapted to rem unit */
 
@@ -145,6 +140,12 @@ html {
     }
   }
 
+  &:hover {
+    &::after {
+      background-color: $color-blue-accessible;
+    }
+  }
+
   // background arrow
   &::after {
     display: block;
@@ -190,12 +191,6 @@ html {
   &.slick-hidden {
     display: none;
   }
-
-  &:hover {
-    &::after {
-      background-color: $color-blue-accessible;
-    }
-  }
 }
 
 .snc-icon-circle-arrow {
@@ -240,6 +235,7 @@ html {
   width: 100%;
   padding-bottom: 2.4rem;
   border-radius: 2px;
+  height: 40rem;
 
   // Adjust video height for 16/9 view
   @media #{$media-large} {

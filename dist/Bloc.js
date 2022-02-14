@@ -15,7 +15,7 @@ var Bloc = function Bloc(_ref) {
   return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("img", {
     src: img,
     alt: "header",
-    className: "bg-gray-300 block ml-auto mr-auto ".concat(space === "light" ? "pt-4" : space === "normal" ? "pt-12" : space === "medium" ? "pt-20" : space === "big" ? "pt-28" : "")
+    className: "bg-gray-300 block ml-auto mr-auto ".concat(space === "10px" ? "pt-4" : space === "30px" ? "pt-12" : space === "50px" ? "pt-20" : space === "70px" ? "pt-28" : "")
   }));
 };
 

@@ -27,13 +27,13 @@ var Default = Template.bind({});
 exports.Default = Default;
 Default.args = {
   inoui: false,
-  space: "medium",
+  space: "30px",
   slide: _data.data
 };
 var Inoui = Template.bind({});
 exports.Inoui = Inoui;
 Inoui.args = {
   inoui: true,
-  space: "light",
+  space: "70px",
   slide: _data.data
 };

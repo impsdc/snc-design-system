@@ -12,7 +12,7 @@ const Template = (args) => <Carrousel {...args} />;
 export const Default = Template.bind({});
 Default.args = {
     inoui: false,
-    space: "medium",
+    space: "30px",
     slide: data,
 }
 
@@ -20,6 +20,6 @@ Default.args = {
 export const Inoui = Template.bind({});
 Inoui.args = {
     inoui: true,
-    space: "light",
+    space: "70px",
     slide: data,
 }

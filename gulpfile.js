@@ -5,6 +5,7 @@ const sass = require('gulp-sass')(require('sass')); // This is different from th
 const prefix = require('gulp-autoprefixer');
 const minify = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
+const replace = require("gulp-replace");
 
 //compile, prefix, and min scss
 function compilescssForDev() {
@@ -23,6 +24,13 @@ function compilescssForProd() {
     .pipe(dest('dist/styles/css')) // change to your final/public directory
 };
 
+// replace @charset "UTF-8";
+function removeCharset() {
+  return src(['src/styles/scss/app.css'])
+    .pipe(replace('@charset "UTF-8";', ''))
+    .pipe(dest('dist/styles/css'));
+};
+
 //optimize and move images
 function optimizeimg() {
   return src('src/images/*.{jpg,png}') // change to your source directory
@@ -37,7 +45,10 @@ function watchTask(){
   watch('src/styles/scss/**/*.scss', compilescssForDev); // change to your source directory
 }
 
-exports.compilescssForProd = compilescssForProd;
+exports.prod = series(
+  compilescssForProd,
+  removeCharset
+);
 // Default Gulp task 
 exports.default = series(
   compilescssForDev,

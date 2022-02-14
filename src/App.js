@@ -1,4 +1,4 @@
-import "./styles/css/app.css";
+import "./styles/scss/app.css";
 import header from "./images/header.jpg";
 import footer from "./images/footer.jpg";
 import bloc1 from "./images/bloc1.jpg";
@@ -13,11 +13,11 @@ function App() {
       <section>
         <img src={header} alt="header" />
       </section>
-      <div className="">
-        <Carrousel slide={data} space="big" />
-        <Bloc img={bloc1} space="light"/>
-        <Carrousel slide={data} space="medium" />
-        <Bloc img={bloc2} space="big"/> 
+      <div>
+        <Carrousel slide={data} space="70px" />
+        <Bloc img={bloc1} space="30px"/>
+        <Carrousel slide={data} space="10px" />
+        <Bloc img={bloc2} space="50px"/> 
       </div>
       <section className="" style={{ background: "#333" }}>
         <img src={footer} alt="header" className="block ml-auto mr-auto" />

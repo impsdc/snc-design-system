@@ -61,14 +61,16 @@ var Carrousel = function Carrousel(_ref2) {
       inoui = _ref2.inoui,
       space = _ref2.space;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "bg-gray-300 max-w-screen-md mr-auto ml-auto ".concat(inoui && "inoui-template-container", " ").concat(space === "light" ? "pt-4" : space === "normal" ? "pt-12" : space === "medium" ? "pt-20" : space === "big" ? "pt-28" : "")
+    className: "block mx-auto md:w-2/4"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bg-gray-300 max-w-screen-md mr-auto ml-auto ".concat(inoui && "inoui-template-container", " ").concat(space === "10px" ? "pt-4" : space === "30px" ? "pt-12" : space === "50px" ? "pt-20" : space === "70px" ? "pt-28" : "")
   }, /*#__PURE__*/_react.default.createElement(_reactSlick.default, settings, slide.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement(ItemSlide, {
       slide: item,
       key: index,
       counter: "".concat(index + 1, "/").concat(slide.length)
     });
-  })));
+  }))));
 };
 
 exports.Carrousel = Carrousel;

@@ -556,6 +556,10 @@ video {
 .relative {
 	position: relative;
 }
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
 .ml-auto {
 	margin-left: auto;
 }
@@ -640,3 +644,9 @@ video {
 	color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 @tailwind forms;
+@media (min-width: 768px) {
+
+	.md\:w-2\/4 {
+		width: 50%;
+	}
+}
